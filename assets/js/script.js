@@ -69,7 +69,19 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
   startPage.classList.add("hide");
   quizPage.classList.remove("hide");
+  timerCountdown();
   displayQuestion();
+}
+
+function timerCountdown() {
+  var timerInterval = setInterval(function () {
+    timer.textContext = countdown;
+    countdown--;
+    if (countdown <= 0) {
+      clearInterval(timerInterval);
+      endGame();
+    }
+  }, 1000);
 }
 
 function displayQuestion() {
