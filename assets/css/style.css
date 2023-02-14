@@ -17,6 +17,7 @@ main {
 
 main h1 {
   font-size: 30px;
+  padding-bottom: 30px;
 }
 
 .options-container {
@@ -24,6 +25,6 @@ main h1 {
   flex-direction: column;
 }
 
-.option {
+.option-button {
   margin: 5px;
 }
