@@ -9,6 +9,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   width: 80vw;
   height: 40vw;
   align-items: center;
@@ -27,4 +28,8 @@ main h1 {
 
 .option-button {
   margin: 5px;
+}
+
+.hide {
+  display: none;
 }

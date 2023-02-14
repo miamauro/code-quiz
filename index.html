@@ -13,27 +13,46 @@
       <!--User can click here to view previous scores-->
       <div id="view-scores">Scores</div>
       <!--User will be shown countdown timer here-->
-      <div id="timer">Timer</div>
+      <div>Timer: <span id="timer"></span></div>
     </header>
     <main>
       <div id="start-page">
         <h1>Code Quiz</h1>
         <button id="start-button">START</button>
       </div>
-      <div id="quiz-page" style="display: none">
+      <div id="quiz-page" class="hide">
         <h1 id="question-container">Question</h1>
         <!--Where quiz options will be displayed-->
-        <p class="options-container">
-          <button class="option-button" id="opt0"></button>
-          <button class="option-button" id="opt1"></button>
-          <button class="option-button" id="opt2"></button>
-          <button class="option-button" id="opt3"></button>
-        </p>
+        <div class="options-container">
+          <button
+            onclick="checkAnswer(event)"
+            class="option-button"
+            id="opt0"
+          ></button>
+          <button
+            onclick="checkAnswer(event)"
+            class="option-button"
+            id="opt1"
+          ></button>
+          <button
+            onclick="checkAnswer(event)"
+            class="option-button"
+            id="opt2"
+          ></button>
+          <button
+            onclick="checkAnswer(event)"
+            class="option-button"
+            id="opt3"
+          ></button>
+          <!--Where result following each quiz question will be displayed-->
+          <p id="question-result"></p>
+        </div>
       </div>
-      <div id="end-page" style="display: none"></div>
-      <div id="scores-page" style="display: none"></div>
-      <!--Where result following each quiz question will be displayed-->
-      <div id="question-result"></div>
+      <div id="end-page" class="hide">
+        <input type="text" name="Initials" id="initials-input" />
+        <input type="text" name="Score" id="score-input" />
+      </div>
+      <div id="scores-page" class="hide"></div>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>
