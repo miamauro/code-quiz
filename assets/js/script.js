@@ -86,3 +86,24 @@ function displayQuestion() {
     }
   }
 }
+
+function checkAnswer(event) {
+  console.log(event.target);
+  if (event.target.textContent === questions[gameLevel].answer) {
+    console.log("Correct!");
+    score++;
+  } else {
+    console.log("Nope");
+    countdown -= 5;
+  }
+  gameLevel++;
+  if (gameLevel >= questions.length) {
+    endGame();
+  } else {
+    displayQuestion();
+  }
+}
+
+function endGame() {
+  console.log("end game");
+}
