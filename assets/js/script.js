@@ -74,8 +74,8 @@ function startQuiz() {
 }
 
 function timerCountdown() {
+  timer.textContext = countdown;
   var timerInterval = setInterval(function () {
-    timer.textContext = countdown;
     countdown--;
     if (countdown <= 0) {
       clearInterval(timerInterval);
@@ -117,5 +117,6 @@ function checkAnswer(event) {
 }
 
 function endGame() {
-  console.log("end game");
+  quizPage.classList.add("hide");
+  endPage.classList.remove("hide");
 }
