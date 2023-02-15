@@ -11,7 +11,7 @@
   <body>
     <header>
       <!--User can click here to view previous scores-->
-      <div id="view-scores">Scores</div>
+      <div id="scores-link"><a href="">Scores</a></div>
       <!--User will be shown countdown timer here-->
       <div>Timer: <span id="timer"></span></div>
     </header>
@@ -49,10 +49,16 @@
         </div>
       </div>
       <div id="end-page" class="hide">
-        <input type="text" name="Initials" id="initials-input" />
-        <input type="text" name="Score" id="score-input" />
+        <p>
+          Your score is <span id="final-score"></span> out of 5.<br />Enter your
+          initials to save your score!
+        </p>
+        <form action="">
+          <label for="initials">Initials</label>
+          <input type="text" name="Initials" id="initials-input" />
+          <button id="save-button">Save</button>
+        </form>
       </div>
-      <div id="scores-page" class="hide"></div>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>

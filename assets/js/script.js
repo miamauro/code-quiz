@@ -1,11 +1,11 @@
 //Declare variables
-var viewScores = document.getElementById("view-scores");
+var scoresLink = document.getElementById("scores-link");
 var startButton = document.getElementById("start-button");
+var saveButton = document.getElementById("save-button");
 var timer = document.getElementById("timer");
 var startPage = document.getElementById("start-page");
 var quizPage = document.getElementById("quiz-page");
 var endPage = document.getElementById("end-page");
-var scoresPage = document.getElementById("scores-page");
 var questionContainer = document.getElementById("question-container");
 var opt0 = document.getElementById("opt0");
 var opt1 = document.getElementById("opt1");
@@ -15,6 +15,7 @@ var qResult = document.getElementById("question-result");
 var score = 0;
 var countdown = 60;
 var gameLevel = 0;
+var finalScore = document.getElementById("final-score");
 var questions = [
   {
     title: "Which is the correct HTML element to indicate a line break?",
@@ -102,10 +103,8 @@ function displayQuestion() {
 function checkAnswer(event) {
   console.log(event.target);
   if (event.target.textContent === questions[gameLevel].answer) {
-    console.log("Correct!");
     score++;
   } else {
-    console.log("Nope");
     countdown -= 5;
   }
   gameLevel++;
@@ -116,7 +115,25 @@ function checkAnswer(event) {
   }
 }
 
+saveButton.addEventListener("click", saveScore);
+
 function endGame() {
   quizPage.classList.add("hide");
   endPage.classList.remove("hide");
+  finalScore.textContent = score;
+  saveScore();
 }
+
+//Save score and initials to local storage
+function saveScore(event) {
+  event.preventDefault();
+  var initials = document.querySelector("#initials-input").value;
+  localStorage.setItem("score", score);
+  localStorage.setItem("initials", initials);
+}
+
+//scoresButton.addEventListener("click", viewScores);
+
+//function viewScores() {
+//  scoresPage.classList.remove("hide");
+//}

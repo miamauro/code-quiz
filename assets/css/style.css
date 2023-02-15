@@ -5,6 +5,11 @@ header {
   font-size: 24px;
 }
 
+#scores-link a {
+  text-decoration: none;
+  color: blue;
+}
+
 main {
   display: flex;
   flex-direction: column;
