@@ -1,0 +1,17 @@
+#back {
+  text-decoration: none;
+  color: blue;
+  font-size: 24px;
+  padding: 10px 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#score-display {
+  display: block;
+}

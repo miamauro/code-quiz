@@ -38,3 +38,8 @@ main h1 {
 .hide {
   display: none;
 }
+
+#scores-link {
+  text-decoration: none;
+  color: blue;
+}
