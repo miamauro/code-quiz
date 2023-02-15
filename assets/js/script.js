@@ -2,6 +2,7 @@
 var scoresLink = document.getElementById("scores-link");
 var startButton = document.getElementById("start-button");
 var saveButton = document.getElementById("save-button");
+var returnButton = document.getElementById("returnToStart");
 var timer = document.getElementById("timer");
 var startPage = document.getElementById("start-page");
 var quizPage = document.getElementById("quiz-page");
@@ -16,6 +17,7 @@ var score = 0;
 var countdown = 60;
 var gameLevel = 0;
 var finalScore = document.getElementById("final-score");
+var highScores = [];
 var questions = [
   {
     title: "Which is the correct HTML element to indicate a line break?",
@@ -38,7 +40,7 @@ var questions = [
     answer: "/",
   },
   {
-    title: "Test",
+    title: "Which is the correct way to call a function?",
     options: [
       "call.functionName()",
       "functionName()",
@@ -121,19 +123,26 @@ function endGame() {
   quizPage.classList.add("hide");
   endPage.classList.remove("hide");
   finalScore.textContent = score;
-  saveScore();
 }
 
 //Save score and initials to local storage
 function saveScore(event) {
   event.preventDefault();
   var initials = document.querySelector("#initials-input").value;
-  localStorage.setItem("score", score);
-  localStorage.setItem("initials", initials);
+  var savedScore = initials + ": " + score;
+  console.log(savedScore);
+  highScores.push(savedScore);
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+  // reset input box to empty for next user
+  document.querySelector("#initials-input").value = "";
 }
 
-//scoresButton.addEventListener("click", viewScores);
+returnButton.addEventListener("click", returnToStart);
 
-//function viewScores() {
-//  scoresPage.classList.remove("hide");
-//}
+function returnToStart() {
+  endPage.classList.add("hide");
+  startPage.classList.remove("hide");
+  gameLevel = 0;
+  score = 0;
+  countdown = 60;
+}
