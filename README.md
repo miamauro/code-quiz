@@ -6,4 +6,8 @@ This application allows the user to navigate through a timed coding quiz of mult
 
 The following link leads to the deployed application.
 
+https://miamauro.github.io/code-quiz/
+
 The following image shows a screenshot of the deployed application.
+
+![plot](./assets/images/screenshot.png)
