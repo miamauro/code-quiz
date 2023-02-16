@@ -53,24 +53,26 @@ var questions = [
   },
 ];
 
+//PSEUDO CODE:
 //Show main page with button to start quiz
 //when start button is clicked, timer will begin countdown from 60 seconds
-//if timer = 0, end quiz function, display "Time's up!", display score, display form to input and store initials with score
+//if timer = 0, end quiz function, display score, display form to input and store initials with score
 //Store initials and corresponding score in Scores to view at any point
 
 //When start button is clicked, hide start page, display q0 with q0 answer options in buttons
 //on hover, button background color will change
 //on click, text will show result below answer options
-//on click, if answer is correct, will update and store score
-//on click, if answer is incorrect, -10 seconds from timer
-//iterate through 5 questions with same function?
-//after iteration, display "Finished!", display score, display form to input and store initials with score
+//on click, if answer is correct, will increase and store score
+//on click, if answer is incorrect, -5 seconds from timer
+//iterate through 5 questions with same function
+//after iteration, display score, display form to input and store initials with score
 //Store initials and corresponding score in Scores to view at any point
 
 //Add event listener
 startButton.addEventListener("click", startQuiz);
 
 //Declare startQuizFunction
+//Use .hide to show/hide pages as needed
 function startQuiz() {
   startPage.classList.add("hide");
   quizPage.classList.remove("hide");
@@ -81,7 +83,7 @@ function startQuiz() {
 function timerCountdown() {
   var timerInterval = setInterval(function () {
     countdown--;
-    timerContainer.textContext = countdown;
+    timerContainer.textContent = countdown;
     if (countdown <= 0) {
       clearInterval(timerInterval);
       endGame();

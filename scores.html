@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--A separate stylesheet is linked (as opposed to main css file) for better organization.-->
     <link rel="stylesheet" href="./assets/css/scores.css" />
     <title>Saved Scores</title>
   </head>
+  <!--This page will display scores saved by user. It is anchored into main page's header to navigate to at any point throughout application.-->
   <body>
     <header>
+      <!--The anchor below will take the user back to the main quiz page.-->
       <div><a id="back" href="./index.html">Back</a></div>
     </header>
     <main>
       <h1>Saved Scores</h1>
       <p id="score-display"></p>
     </main>
+    <!--A separate JS file is linked for better organization.-->
     <script src="./assets/js/scores.js"></script>
   </body>
 </html>
