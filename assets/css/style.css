@@ -23,7 +23,15 @@ main {
 
 main h1 {
   font-size: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+#instructions {
+  font-size: 20px;
+}
+
+#start-button {
+  margin-top: 20px;
 }
 
 .options-container {
@@ -37,6 +45,10 @@ main h1 {
 
 .hide {
   display: none;
+}
+
+#save-instructions {
+  font-size: 20px;
 }
 
 #scores-link {
