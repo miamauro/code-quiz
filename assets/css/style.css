@@ -56,3 +56,8 @@ main h1 {
 main form {
   padding: 20px;
 }
+
+#question-result {
+  margin-top: 20px;
+  color: grey;
+}

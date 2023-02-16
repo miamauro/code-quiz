@@ -109,8 +109,11 @@ function checkAnswer(event) {
   console.log(event.target);
   if (event.target.textContent === questions[gameLevel].answer) {
     score++;
+    qResult.textContent = "Keep it up! You got the last question correct!";
   } else {
     countdown -= 5;
+    qResult.textContent =
+      "You got the last question wrong. You've got it this time.";
   }
   //iterate through questions
   gameLevel++;
@@ -150,4 +153,5 @@ function returnToStart() {
   gameLevel = 0;
   score = 0;
   countdown = 60;
+  qResult.textContent = "";
 }
