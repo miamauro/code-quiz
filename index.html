@@ -18,7 +18,7 @@
     <main>
       <div id="start-page">
         <h1>Code Quiz</h1>
-        <button id="start-button">START</button>
+        <button class="btn" id="start-button">START</button>
       </div>
       <div id="quiz-page" class="hide">
         <h1 id="question-container">Question</h1>
@@ -26,22 +26,22 @@
         <div class="options-container">
           <button
             onclick="checkAnswer(event)"
-            class="option-button"
+            class="option-button btn"
             id="opt0"
           ></button>
           <button
             onclick="checkAnswer(event)"
-            class="option-button"
+            class="option-button btn"
             id="opt1"
           ></button>
           <button
             onclick="checkAnswer(event)"
-            class="option-button"
+            class="option-button btn"
             id="opt2"
           ></button>
           <button
             onclick="checkAnswer(event)"
-            class="option-button"
+            class="option-button btn"
             id="opt3"
           ></button>
           <!--Where result following each quiz question will be displayed-->
@@ -54,11 +54,11 @@
           initials to save your score!
         </p>
         <form action="">
-          <label for="initials">Initials</label>
+          <label for="initials">Initials:</label>
           <input type="text" name="Initials" id="initials-input" />
-          <button id="save-button">Save</button>
+          <button class="btn" id="save-button">Save</button>
         </form>
-        <button id="returnToStart">Return to Start Page</button>
+        <button class="btn" id="returnToStart">Return to Start Page</button>
       </div>
     </main>
     <script src="./assets/js/script.js"></script>
