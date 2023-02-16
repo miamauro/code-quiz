@@ -139,8 +139,14 @@ function saveScore(event) {
   event.preventDefault();
   var initials = document.querySelector("#initials-input").value;
   var savedScore = initials + ": " + score;
+
+  var savedScore1 = {
+    initials: initials,
+    score: score,
+  };
+
   console.log(savedScore);
-  highScores.push(savedScore);
+  highScores.push(savedScore1);
   localStorage.setItem("highScores", JSON.stringify(highScores));
   // reset input box to empty for next user
   document.querySelector("#initials-input").value = "";
