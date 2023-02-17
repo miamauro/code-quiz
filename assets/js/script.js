@@ -22,9 +22,9 @@ var highScores = [];
 //create an array of objects to store quiz questions
 var questions = [
   {
-    title: "Which is the correct HTML element to indicate a line break?",
-    options: ["<lb>", "<br>", "<n>", "<break>"],
-    answer: "<br>",
+    title: "How can you declare a variable in JavaScript?",
+    options: ["variable x", "var x", "define x", "variable(x)"],
+    answer: "var x",
   },
   {
     title: "Which character pair indicates an array in JavaScript?",
@@ -32,17 +32,18 @@ var questions = [
     answer: "[]",
   },
   {
-    title: "Which CSS property is used to change the text color of an element?",
-    options: ["color", "text", "text-color", "font"],
-    answer: "color",
+    title: "Inside which HTML tag do you link your JavaScript code?",
+    options: ["<script>", "<javascript>", "<code>", "<js>"],
+    answer: "<script>",
   },
   {
-    title: "Which character is used to indicate an HTML end tag?",
-    options: ["<", "*", "/", "]"],
-    answer: "/",
+    title:
+      "Which is the correct way to begin a single line comment in JavaScript?",
+    options: ["<!--", "**", "//", "<"],
+    answer: "//",
   },
   {
-    title: "Which is the correct way to call a function?",
+    title: "Which is the correct way to call a function in JavaScript?",
     options: [
       "call.functionName()",
       "functionName()",
