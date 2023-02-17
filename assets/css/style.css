@@ -16,9 +16,8 @@ main {
   justify-content: center;
   text-align: center;
   width: 80vw;
-  height: 40vw;
   align-items: center;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 main h1 {
