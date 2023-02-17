@@ -88,6 +88,9 @@ function timerCountdown() {
       clearInterval(timerInterval);
       endGame();
     }
+    if (gameLevel >= questions.length) {
+      clearInterval(timerInterval);
+    }
   }, 1000);
 }
 
@@ -138,6 +141,10 @@ function endGame() {
 function saveScore(event) {
   event.preventDefault();
   var initials = document.querySelector("#initials-input").value;
+  if (initials == "") {
+    alert("You must enter your initials to save your score.");
+    return;
+  }
   var savedScore = initials + ": " + score;
 
   var savedScore1 = {
