@@ -167,6 +167,7 @@ function returnToStart() {
   startPage.classList.remove("hide");
   gameLevel = 0;
   score = 0;
+  timerContainer.textContent = "60";
   countdown = 60;
   qResult.textContent = "";
 }
